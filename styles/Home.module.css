@@ -1,0 +1,133 @@
+/* GLOBAL */
+body.dark-mode .visualizerButton {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+body.dark-mode .visualizerButton:hover {
+  color: #ccc;
+}
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0%;
+  height: 200px;
+  margin-top: 20%;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding-top: 3%;
+  padding-bottom: 6%;
+}
+
+.image {
+  max-height: 200px;
+  max-width: 200px;
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid #DEDEDE;
+  border-radius: 50px;
+  box-shadow: 0.2px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.style {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.justify {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.visualizerChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* VISUALIZER BUTTONS (LIGHT MODE DEFAULT) */
+.visualizerButton {
+  position: relative; /* obligatoire pour que ::after se positionne dessus */
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 5%;
+  width: 100%;
+  padding: 5% 0;
+  color: black;
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Lignes magiques */
+.visualizerButton::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: currentColor;
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Survol = ligne qui s'étend */
+.visualizerButton:hover::after {
+  width: 100%;
+}
+
+body.dark-mode .visualizerChoice .visualizerButton {
+  color: white;
+}
+
+body.dark-mode .visualizerChoice .visualizerButton::after {
+  background-color: white;
+}
+
+body.dark-mode .visualizerChoice .visualizerButton:hover {
+  color: #ccc;
+}
+
+body.dark-mode .visualizerChoice .visualizerButton:hover::after {
+  background-color: #ccc;
+}
