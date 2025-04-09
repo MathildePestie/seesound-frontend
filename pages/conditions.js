@@ -44,27 +44,36 @@ function Conditions({ isDarkMode = false }) {
                 notice and may result in account suspension or termination.
               </p>
               </div>
+              <div className={styles.paragraphe}>
+              <span className={styles.number}>2. </span>
               <p className={styles.terms}>
-                2. **Copyright and Intellectual Property** SeeSound does not
+                **Copyright and Intellectual Property** SeeSound does not
                 remunerate artists featured in user-created visualizations. You
                 are solely responsible for obtaining all necessary rights and
                 permissions from the original authors before uploading any audio
                 content. Unauthorized use of copyrighted material is strictly
                 forbidden and may result in legal consequences.
               </p>
+              </div>
+              <div className={styles.paragraphe}>
+              <span className={styles.number}>3. </span>
               <p className={styles.terms}>
-                3. **Liability** SeeSound shall not be held liable for content
+                **Liability** SeeSound shall not be held liable for content
                 uploaded by its users. The platform reserves the right to
                 delete, restrict, or moderate any content at its sole
                 discretion.
               </p>
+              </div>
+              <div className={styles.paragraphe}>
+              <span className={styles.number}>4. </span>
               <p className={styles.terms}>
-                4. **User Responsibility** By using SeeSound, you commit to
+                **User Responsibility** By using SeeSound, you commit to
                 using the service respectfully and lawfully. Any abuse or
                 violation of these terms may lead to permanent removal of your
                 content and/or your account. Let your creativity shine — but
                 always respect the rights of others.
               </p>
+              </div>
             </div>
             <div className={styles.visualContainer}>
               <div className={styles.visuali}>
