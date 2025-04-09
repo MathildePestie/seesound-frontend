@@ -26,9 +26,9 @@ function DarkModeWrapper({ children }) {
 
   useEffect(() => {
     if (darkMode) {
-      document.body.classList.add("dark");
+      document.body.classList.add("dark-mode");
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.remove("dark-mode");
     }
   }, [darkMode]);
 

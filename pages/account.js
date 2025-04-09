@@ -38,7 +38,9 @@ function Account({ isDarkMode = false }) {
       <Header isDarkMode={darkMode} />
       <div className={styles.wrapper}>
         <div className={styles.headline}>
-          <DarkModeToggle />
+        <div className={styles.toggleWrapper}>
+            <DarkModeToggle />
+          </div>
         </div>
 
         {visuals.length === 0 ? (

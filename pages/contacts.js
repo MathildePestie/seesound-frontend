@@ -15,7 +15,9 @@ function Contacts() {
       <Header isDarkMode={darkMode} />
       <div className={styles.wrapper}>
         <div className={styles.headline}>
-          <DarkModeToggle />
+          <div className={styles.toggleWrapper}>
+            <DarkModeToggle />
+          </div>
         </div>
         <div>
           <p className={styles.main}>A well-versed team</p>
@@ -25,8 +27,10 @@ function Contacts() {
           <p className={styles.description}>
             Hello ! I'm Tony and it will be a pleasure to not discuss with you !
           </p>
-          <PhoneIcon className={styles.icon} />
-          <MailIcon className={styles.icon} />
+          <div className={styles.icons}>
+            <PhoneIcon className={styles.icon} />
+            <MailIcon className={styles.icon} />
+          </div>
         </div>
         <div className={styles.contacts}>
           <TrollFace className={styles.profile} />
@@ -34,8 +38,10 @@ function Contacts() {
             Hi ! I'm Sabrina I don't really know why I'm here but I'm paid so
             that's okey...
           </p>
-          <PhoneIcon className={styles.icon} />
-          <MailIcon className={styles.icon} />
+          <div className={styles.icons}>
+            <PhoneIcon className={styles.icon} />
+            <MailIcon className={styles.icon} />
+          </div>
         </div>
         <div className={styles.contacts}>
           <TrollFace className={styles.profile} />
@@ -43,8 +49,10 @@ function Contacts() {
             Hello, I'm Peter I love music but I hate people so... Don't ask me
             anything... Please...
           </p>
-          <PhoneIcon className={styles.icon} />
-          <MailIcon className={styles.icon} />
+          <div className={styles.icons}>
+            <PhoneIcon className={styles.icon} />
+            <MailIcon className={styles.icon} />
+          </div>
         </div>
       </div>
       <Footer isDarkMode={darkMode} />

@@ -68,3 +68,20 @@
 .textDarkLast:hover {
   transform: scale(1.15);
 }
+
+@media screen and (max-width: 1024px) {
+  .textLight,
+  .textDark,
+  .textLightLast,
+  .textDarkLast {
+    font-size: 12px;
+  }
+
+  .linkContainer {
+    width: 50%;
+  }
+
+  .align {
+    padding-bottom: 10px;
+  }
+}

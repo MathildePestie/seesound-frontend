@@ -131,3 +131,55 @@ body.dark-mode .visualizerChoice .visualizerButton:hover {
 body.dark-mode .visualizerChoice .visualizerButton:hover::after {
   background-color: #ccc;
 }
+
+@media screen and (max-width: 1024px) {
+  .headline {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headline h1 {
+    font-size: 25px;
+  }
+
+  .justify {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 10px;
+  }
+
+  .image {
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 30px;
+  }
+
+  .style {
+    font-size: 15px;
+  }
+
+  .visualizerButton {
+    font-size: 25px;
+    padding: 14px;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  /* Cache le toggle si présent en version mobile */
+  .headline :global(.toggle-container) {
+    display: none;
+  }
+
+  .toggleWrapper {
+    display: none;
+  }
+}
+

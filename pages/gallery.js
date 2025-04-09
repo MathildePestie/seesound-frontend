@@ -42,14 +42,17 @@ function Gallery({ isDarkMode = false }) {
       <Header isDarkMode={darkMode} />
       <div className={styles.wrapper}>
         <div className={styles.headline}>
-          <DarkModeToggle />
+          <div className={styles.toggleWrapper}>
+            <DarkModeToggle />
+          </div>
         </div>
         <div
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "20px",
-            justifyContent: "center",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "30px",
+            justifyItems: "center",
+            padding: "20px",
           }}
         >
           {isLoading ? (

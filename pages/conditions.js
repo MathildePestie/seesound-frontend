@@ -23,7 +23,9 @@ function Conditions({ isDarkMode = false }) {
       <Header isDarkMode={darkMode} />
       <div className={styles.wrapper}>
         <div className={styles.headline}>
-          <DarkModeToggle />
+          <div className={styles.toggleWrapper}>
+            <DarkModeToggle />
+          </div>
         </div>
         <div className={styles.container}>
           <section className={styles.hero}>
@@ -34,45 +36,46 @@ function Conditions({ isDarkMode = false }) {
                 following terms:
               </p>
               <div className={styles.paragraphe}>
-              <span className={styles.number}>1. </span>
-              <p className={styles.terms}>
-                **Community Guidelines** SeeSound is a community-driven
-                platform intended for creative expression. Users are strictly
-                prohibited from uploading or sharing any content that is
-                violent, hateful, offensive, defamatory, discriminatory, or
-                otherwise harmful. Inappropriate content will be removed without
-                notice and may result in account suspension or termination.
-              </p>
+                <span className={styles.number}>1. </span>
+                <p className={styles.terms}>
+                  **Community Guidelines** SeeSound is a community-driven
+                  platform intended for creative expression. Users are strictly
+                  prohibited from uploading or sharing any content that is
+                  violent, hateful, offensive, defamatory, discriminatory, or
+                  otherwise harmful. Inappropriate content will be removed
+                  without notice and may result in account suspension or
+                  termination.
+                </p>
               </div>
               <div className={styles.paragraphe}>
-              <span className={styles.number}>2. </span>
-              <p className={styles.terms}>
-                **Copyright and Intellectual Property** SeeSound does not
-                remunerate artists featured in user-created visualizations. You
-                are solely responsible for obtaining all necessary rights and
-                permissions from the original authors before uploading any audio
-                content. Unauthorized use of copyrighted material is strictly
-                forbidden and may result in legal consequences.
-              </p>
+                <span className={styles.number}>2. </span>
+                <p className={styles.terms}>
+                  **Copyright and Intellectual Property** SeeSound does not
+                  remunerate artists featured in user-created visualizations.
+                  You are solely responsible for obtaining all necessary rights
+                  and permissions from the original authors before uploading any
+                  audio content. Unauthorized use of copyrighted material is
+                  strictly forbidden and may result in legal consequences.
+                </p>
               </div>
               <div className={styles.paragraphe}>
-              <span className={styles.number}>3. </span>
-              <p className={styles.terms}>
-                **Liability** SeeSound shall not be held liable for content
-                uploaded by its users. The platform reserves the right to
-                delete, restrict, or moderate any content at its sole
-                discretion.
-              </p>
+                <span className={styles.number}>3. </span>
+                <p className={styles.terms}>
+                  **Liability** SeeSound shall not be held liable for content
+                  uploaded by its users. The platform reserves the right to
+                  delete, restrict, or moderate any content at its sole
+                  discretion.
+                </p>
               </div>
               <div className={styles.paragraphe}>
-              <span className={styles.number}>4. </span>
-              <p className={styles.terms}>
-                **User Responsibility** By using SeeSound, you commit to
-                using the service respectfully and lawfully. Any abuse or
-                violation of these terms may lead to permanent removal of your
-                content and/or your account. Let your creativity shine — but
-                always respect the rights of others.
-              </p>
+                <span className={styles.number}>4. </span>
+                <p className={styles.terms}>
+                  **User Responsibility** By using SeeSound, you commit to using
+                  the service respectfully and lawfully. Any abuse or violation
+                  of these terms may lead to permanent removal of your content
+                  and/or your account. Let your creativity shine — but always
+                  respect the rights of others.
+                </p>
               </div>
             </div>
             <div className={styles.visualContainer}>

@@ -11,6 +11,8 @@
   transition: transform 0.2s ease-in-out;
   position: relative;
   overflow: hidden;
+  max-width: 280px;
+  max-height: 280px;
 }
 
 .card:hover {

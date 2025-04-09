@@ -14,6 +14,7 @@
   
   .textBlock {
     max-width: 600px;
+    margin-bottom: 30px;
   }
   
   .visualContainer {
@@ -133,3 +134,52 @@
   .dark-mode .stepIcon {
     color: white!important;
   }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .textBlock {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  
+    .terms {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .paragraphe {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  
+    .number {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+  
+    .visualContainer {
+      align-items: center;
+      margin-top: 30px;
+    }
+  
+    .visuali:nth-child(2),
+    .visuali:nth-child(3) {
+      display: none;
+    }
+  
+    .visuali img {
+      max-width: 450px;
+      height: auto;
+    }
+
+    .toggleWrapper {
+      display: none;
+    }
+  }
+  

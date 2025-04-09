@@ -25,6 +25,7 @@
 
 .contacts {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
@@ -44,37 +45,75 @@
 }
 
 .contactLight {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
+}
+
+.contactDark {
+  background-color: black;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+}
+
+.contactLight {
+  background-color: white;
+  color: black; /* Couleur héritée pour les SVG */
+}
+
+.contactDark {
+  background-color: black;
+  color: white; /* Couleur héritée pour les SVG */
+}
+
+.svgWrapper {
+  width: 300px;
+  height: auto;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  color: black;
+}
+
+.contactDark .icon {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
-  
-  .contactDark {
-    background-color: black;
-    color: white;
-  }
-  
-  .contactLight {
-    background-color: white;
-    color: black; /* Couleur héritée pour les SVG */
-  }
-  
-  .contactDark {
-    background-color: black;
-    color: white; /* Couleur héritée pour les SVG */
-  }
-  
-  .svgWrapper {
-    width: 300px;
-    height: auto;
+
+  .description {
+    width: 90%;
+    margin: 0;
   }
 
   .icon {
-    width: 50px;
-    height: 50px;
-    color: black;
+    width: 40px;
+    height: 40px;
   }
-  
-  .contactDark .icon {
-    color: white;
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    width: 20%;
   }
-  
+
+  .toggleWrapper {
+    display: none;
+  }
+}

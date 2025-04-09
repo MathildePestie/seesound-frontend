@@ -26,7 +26,9 @@ function About({ isDarkMode = false }) {
       <Header isDarkMode={darkMode} />
       <div className={styles.wrapper}>
         <div className={styles.headline}>
-          <DarkModeToggle />
+        <div className={styles.toggleWrapper}>
+            <DarkModeToggle />
+          </div>
         </div>
         <div className={styles.container}>
           <section className={styles.hero}>

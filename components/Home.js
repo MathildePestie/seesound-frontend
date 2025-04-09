@@ -10,7 +10,9 @@ function Home({ isDarkMode = false }) {
     <div className={`homeContainer ${styles.wrapper}`}>
       <div className={styles.headline}>
         <h1 className={styles.title}>How does your sound look like ?</h1>
+        <div className={styles.toggleWrapper}>
         <DarkModeToggle />
+        </div>
       </div>
       <div className={styles.justify}>
         <div className={styles.align}>
