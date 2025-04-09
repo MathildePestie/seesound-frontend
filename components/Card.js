@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Card.module.css";
 import { useSelector } from "react-redux";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 const ModalContent = dynamic(() => import("./ModalContent"), { ssr: false });
 
 function Card({ title, artist, username, videoUrl, likes = [] }) {
@@ -48,12 +49,15 @@ function Card({ title, artist, username, videoUrl, likes = [] }) {
           </div>
 
           <div className={styles.iconContainer}>
-            <img
+            <Image
               src={
                 darkMode ? "/images/play_blanc.svg" : "/images/play_noir.svg"
               }
               alt="Play"
+              width={30}
+              height={30}
               className={styles.icon}
+              loading="lazy"
             />
           </div>
           <p
