@@ -17,4 +17,20 @@
   padding-bottom: 6%;
 }
 
+.loadingMessage {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 40px auto;
+  color: #888;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
 

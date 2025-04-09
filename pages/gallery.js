@@ -10,6 +10,7 @@ function Gallery({ isDarkMode = false }) {
   const darkMode = useSelector((state) => state.theme.darkMode);
   const [visuals, setVisuals] = useState([]);
   const token = localStorage.getItem("token");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -31,6 +32,7 @@ function Gallery({ isDarkMode = false }) {
         if (data.visuals) {
           // On les affiche en reverse pour voir la dernière création en premier
           setVisuals([...data.visuals].reverse());
+          setIsLoading(false);
         }
       });
   }, []);
@@ -50,17 +52,22 @@ function Gallery({ isDarkMode = false }) {
             justifyContent: "center",
           }}
         >
-          {visuals.map((visual, index) => (
-            <Card
-              key={index}
-              id={visual._id}
-              title={visual.title}
-              artist={visual.artist}
-              username={visual.username || "Anonyme"}
-              videoUrl={visual.mp4Url}
-              likes={visual.likes}
-            />
-          ))}
+          {isLoading ? (
+            <p className={styles.loadingMessage}>
+              Our masterpieces will appear soon, be patient! 🎶✨
+            </p>
+          ) : (
+            visuals.map((v, index) => (
+              <Card
+                key={v._id || index} // Préférence pour v._id
+                title={v.title}
+                artist={v.artist}
+                username={v.username || "Anonyme"}
+                videoUrl={v.mp4Url}
+                likes={v.likes}
+              />
+            ))
+          )}
         </div>
       </div>
       <Footer isDarkMode={darkMode} />
