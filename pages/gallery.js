@@ -54,7 +54,7 @@ function Gallery({ isDarkMode = false }) {
         >
           {isLoading ? (
             <p className={styles.empty}>
-              Our masterpieces will appear soon, be patient! 🎶✨
+              Our masterpieces will appear soon, be patient!
             </p>
           ) : (
             visuals.map((v, index) => (
