@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Card.module.css";
 import { useSelector } from "react-redux";
+import dynamic from "next/dynamic";
+const ModalContent = dynamic(() => import("./ModalContent"), { ssr: false });
 
 function Card({ title, artist, username, videoUrl, likes = [] }) {
   const [showModal, setShowModal] = useState(false);
@@ -83,29 +85,7 @@ function Card({ title, artist, username, videoUrl, likes = [] }) {
       </div>
 
       {showModal && (
-        <div
-          className={styles.modalOverlay}
-          onClick={() => setShowModal(false)}
-        >
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className={styles.closeButton}
-              onClick={() => setShowModal(false)}
-            >
-              &times;
-            </button>
-            <video
-              key={videoUrl}
-              src={videoUrl}
-              controls
-              autoPlay
-              className={styles.video}
-            ></video>
-          </div>
-        </div>
+        <ModalContent videoUrl={videoUrl} onClose={() => setShowModal(false)} />
       )}
     </>
   );
