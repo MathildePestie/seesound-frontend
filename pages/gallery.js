@@ -53,7 +53,7 @@ function Gallery({ isDarkMode = false }) {
           }}
         >
           {isLoading ? (
-            <p className={styles.loadingMessage}>
+            <p className={styles.empty}>
               Our masterpieces will appear soon, be patient! 🎶✨
             </p>
           ) : (

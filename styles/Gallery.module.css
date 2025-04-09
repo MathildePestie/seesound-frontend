@@ -17,20 +17,15 @@
   padding-bottom: 6%;
 }
 
-.loadingMessage {
-  font-size: 1.3rem;
+.empty {
+  flex-grow: 1;
   text-align: center;
-  margin: 40px auto;
-  color: #888;
-  animation: fadeIn 1s ease-in-out infinite alternate;
+  padding: 80px 20px;
+  color: #999;
+  font-size: 40px;
+  font-style: italic;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
+.emptyText {
+  margin: 10px 0;
 }
-
