@@ -12,9 +12,12 @@ function ModalContent({ videoUrl, onClose }) {
           src={videoUrl}
           controls
           autoPlay
-          preload="none"
+          preload="auto"  // Pré-charger la vidéo pour un démarrage plus rapide
           className={styles.video}
-        ></video>
+          onError={() => alert("Erreur de lecture de la vidéo")}
+        >
+          <p>Votre navigateur ne prend pas en charge la lecture de vidéos MP4.</p>
+        </video>
       </div>
     </div>
   );
