@@ -1,51 +1,8 @@
-import { useEffect } from "react";
-import styles from "../styles/Card.module.css";
-import Plyr from "plyr";
+import { useState } from 'react';
+import styles from "../styles/Card.module.css"; // Assure-toi d'ajuster les styles en conséquence
 
 function ModalContent({ videoUrl, onClose }) {
-  useEffect(() => {
-    // Initialiser Plyr avec des options personnalisées
-    const player = new Plyr("#plyr-video", {
-      autoplay: true,
-      controls: [
-      ],
-      tooltips: { controls: true },
-    });
-
-    // Appliquer des styles pour cacher les contrôles par défaut
-    const plyrControls = document.querySelectorAll(".plyr__control");
-    plyrControls.forEach((control) => {
-      control.style.opacity = "0"; // Masquer les contrôles au départ
-      control.style.transition = "opacity 0.3s"; // Transition en douceur
-    });
-
-    // Appliquer un style de positionnement discret au bas de la vidéo
-    const videoContainer = document.querySelector(".plyr__video-embed");
-    if (videoContainer) {
-      videoContainer.style.position = "relative";
-      videoContainer.style.bottom = "0"; // Placer la vidéo en bas
-    }
-
-    // Montrer les contrôles au survol
-    const videoElement = document.querySelector("#plyr-video");
-    if (videoElement) {
-      videoElement.addEventListener("mousemove", () => {
-        plyrControls.forEach((control) => {
-          control.style.opacity = "1"; // Rendre les contrôles visibles lors du survol
-        });
-      });
-
-      videoElement.addEventListener("mouseleave", () => {
-        plyrControls.forEach((control) => {
-          control.style.opacity = "0"; // Cacher les contrôles après 2 secondes sans survol
-        });
-      });
-    }
-
-    return () => {
-      player.destroy(); // Détruire le lecteur à la fermeture du modal
-    };
-  }, [videoUrl]);
+  const [isHovered, setIsHovered] = useState(false); // Gérer l'état du survol du curseur
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
@@ -53,11 +10,21 @@ function ModalContent({ videoUrl, onClose }) {
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
-        <video
-          id="plyr-video"
-          src={videoUrl}
-          className={styles.video}
-        ></video>
+        
+        <div
+          className={styles.videoWrapper}
+          onMouseEnter={() => setIsHovered(true)} // Quand la souris entre dans la vidéo
+          onMouseLeave={() => setIsHovered(false)} // Quand la souris sort de la vidéo
+        >
+          <video
+            key={videoUrl}
+            src={videoUrl}
+            controls={isHovered} // Les contrôles sont visibles seulement au survol
+            autoPlay
+            preload="auto"
+            className={styles.video}
+          />
+        </div>
       </div>
     </div>
   );
