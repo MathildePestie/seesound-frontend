@@ -174,15 +174,47 @@
   transform: scale(1.3);
 }
 
-.video {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  border-radius: 10px;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Applique des styles généraux à la vidéo */
+.plyr__video-embed {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Masque les contrôles par défaut */
+.plyr__control {
+  opacity: 0 !important;  /* Masque les contrôles au départ */
+  transition: opacity 0.3s ease-out; /* Transition douce */
+}
+
+/* Positionne les contrôles au bas de la vidéo */
+.plyr__controls {
+  position: absolute;
+  bottom: 10px; /* Placer les contrôles en bas de la vidéo */
+  left: 50%;
+  transform: translateX(-50%); /* Centrer les contrôles */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond transparent noir */
+  border-radius: 5px; /* Arrondir les bords */
+  padding: 5px 10px;
+}
+
+/* Modifier la taille des contrôles */
+.plyr__control {
+  font-size: 18px; /* Réduire la taille des boutons */
+  color: white;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.plyr__control:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Changer légèrement la couleur au survol */
+}
+
 
