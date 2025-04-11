@@ -2,12 +2,14 @@ import styles from "../styles/Home.module.css";
 import DarkModeToggle from "./DarkModeToggle";
 import { useState } from "react";
 import ModalWrapper from "./ModalWrapper";
+import DeviceCheck from '../components/DeviceCheck';
 
 function Home({ isDarkMode = false }) {
   const [selectedVisualizer, setSelectedVisualizer] = useState(null);
 
   return (
     <div className={`homeContainer ${styles.wrapper}`}>
+       <DeviceCheck />
       <div className={styles.headline}>
         <h1 className={styles.title}>How does your sound look like ?</h1>
         <div className={styles.toggleWrapper}>
