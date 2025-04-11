@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import styles from "../styles/Card.module.css"; // Assure-toi d'ajuster les styles en conséquence
 
 function ModalContent({ videoUrl, onClose }) {
@@ -10,7 +10,7 @@ function ModalContent({ videoUrl, onClose }) {
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
-        
+
         <div
           className={styles.videoWrapper}
           onMouseEnter={() => setIsHovered(true)} // Quand la souris entre dans la vidéo
@@ -18,8 +18,8 @@ function ModalContent({ videoUrl, onClose }) {
         >
           <video
             key={videoUrl}
-            src={videoUrl}
-            controls={isHovered} // Les contrôles sont visibles seulement au survol
+            src={videoUrl || "/path/to/default-video.mp4"} // Ajoutez un fallback
+            controls={isHovered}
             autoPlay
             preload="auto"
             className={styles.video}

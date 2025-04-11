@@ -24,8 +24,10 @@ function Gallery({ isDarkMode = false }) {
     fetch("https://seesound-backend.onrender.com/upload/all-visuals", {
       method: "GET",
       headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"),
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
       },
+      credentials: 'include',  // Inclure les cookies d'authentification si nécessaire
     })
       .then((res) => res.json())
       .then((data) => {
