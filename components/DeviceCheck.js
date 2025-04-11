@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/Card.module.css";
+import styles from "../styles/DeviceCheck.module.css";
 
 const DeviceCheck = () => {
   const [isMobile, setIsMobile] = useState(false);
