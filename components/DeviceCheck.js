@@ -43,12 +43,9 @@ const DeviceCheck = () => {
         }}
       >
         <h2 style={{ fontSize: "2rem" }}>
-          Le site n'est pas accessible sur mobile
+          The site is not accessible on mobile
         </h2>
-        <p>
-          Veuillez accéder au site sur un ordinateur pour une meilleure
-          expérience.
-        </p>
+        <p>Please access the site on a computer for best experience.</p>
         <div className={styles.musicIcon}>
           <svg viewBox="0 0 110 135">
             <path
